@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Primeira Página JSF</title>
+</h:head>
+<h:body>
+
+	<h:form>
+
+		<br />
+		<h:outputLabel>Nome:</h:outputLabel>
+
+		<h:inputText id="nome" value="#{pessoaBean.nome}" />
+
+		
+
+		
+		<h:commandButton value="Adicionar Nome"
+			action="#{pessoaBean.addNome}" />
+			
+			<br/><br/><br/>
+			
+		<h:dataTable border="1" value="#{pessoaBean.nomes}" var="nome">
+		
+		<h:column>
+		
+		<h:outputText value="#{nome}"/>
+		
+		</h:column>
+		
+		
+		</h:dataTable>
+
+	</h:form>
+
+</h:body>
+</html>
