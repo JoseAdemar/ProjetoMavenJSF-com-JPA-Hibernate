@@ -28,8 +28,13 @@ public class HibernateUtil {
 		}
 	}
 
-	public static EntityManager geEntityManager() {
+	public static EntityManager geEntityManager() { // PROVER A PARTE DE PERSISTÊNCIA
 		return factory.createEntityManager();
+
+	}
+
+	public static Object getPrimaryKey(Object entity) {   // RETORNA A CHAVE PRIMARIA
+		return factory.getPersistenceUnitUtil().getIdentifier(entity);
 
 	}
 
